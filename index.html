@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Tic Tac Toe game by Harsh Pandey | Code Nest" />
+  <meta name="keywords" content="Tic Tac Toe, Harsh Pandey, Code Nest, JavaScript, Bootstrap, Game" />
+  <meta name="author" content="Harsh Pandey" />
+  <title>Tic Tac Toe | Code Nest</title>
+
+  <!-- Favicons -->
+
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Tic Tac Toe" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Name Input Modal -->
+  <div class="modal fade" id="nameModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="nameModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header border-0">
+          <h5 class="modal-title w-100" id="nameModalLabel">Enter Player Names</h5>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="playerXName" class="form-control mb-3" placeholder="Player X Name (default: Player X)" />
+          <input type="text" id="playerOName" class="form-control" placeholder="Player O Name (default: Player O)" />
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-primary w-100" onclick="startGame()">Start Game</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Screen -->
+  <div class="container text-center my-5" id="game-screen" style="display: none;">
+    <h2 class="mb-4 fw-bold text-primary">Tic Tac Toe</h2>
+    <div class="row mb-3">
+      <div class="col-md-6" id="player1">Player X: 0</div>
+      <div class="col-md-6" id="player2">Player O: 0</div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6">
+        <div class="row g-2">
+          <div class="col-4 cell" onclick="makeMove(0)"></div>
+          <div class="col-4 cell" onclick="makeMove(1)"></div>
+          <div class="col-4 cell" onclick="makeMove(2)"></div>
+        </div>
+        <div class="row g-2">
+          <div class="col-4 cell" onclick="makeMove(3)"></div>
+          <div class="col-4 cell" onclick="makeMove(4)"></div>
+          <div class="col-4 cell" onclick="makeMove(5)"></div>
+        </div>
+        <div class="row g-2">
+          <div class="col-4 cell" onclick="makeMove(6)"></div>
+          <div class="col-4 cell" onclick="makeMove(7)"></div>
+          <div class="col-4 cell" onclick="makeMove(8)"></div>
+        </div>
+      </div>
+    </div>
+    <h5 class="mt-4" id="status">Turn: Player X</h5>
+    <div class="mt-3">
+      <button class="btn btn-warning me-2 px-4" onclick="resetGame()">Restart</button>
+      <button class="btn btn-secondary px-4" onclick="newGame()">New Game</button>
+    </div>
+
+    <!-- Footer (moved inside game screen) -->
+    <footer class="text-center mt-5 py-3">
+      <small>&copy; 2025 Code Nest | Built by Harsh Pandey</small>
+    </footer>
+  </div>
+
+
+
+  <!-- Bootstrap JS (for modal) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Game Logic -->
+<script src="script.js"></script>
+</body>
+
+</html>
