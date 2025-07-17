@@ -24,6 +24,7 @@ A modern, professional Tic Tac Toe web game built with HTML, CSS, JavaScript, an
 - JavaScript
 
 ---
+```
 
 ## 📁 Project Structure
 
@@ -33,7 +34,7 @@ A modern, professional Tic Tac Toe web game built with HTML, CSS, JavaScript, an
 ├── script.js          # Game logic
 ├── assets/logo.png    # App logo
 ├── README.md          # Project documentation
-
+```
 ---
 
 ## 🚀 Installation & Usage
